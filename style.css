@@ -1,0 +1,408 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+:root {
+  --default-color: #ee6e73;
+  --white: #eee;
+  --black: #222;
+}
+
+/* Farger */
+.teal {
+  --main-color: #009688;
+}
+
+.red {
+  --main-color: #f44336;
+}
+
+.pink {
+  --main-color: #ee6e73;
+}
+
+.indigo {
+  --main-color: #3f51b5;
+}
+
+.blue {
+  --main-color: #2196f3;
+}
+
+.cyan {
+  --main-color: #00bcd4;
+}
+
+.green {
+  --main-color: #4caf50;
+}
+
+.orange {
+  --main-color: #ff9800;
+}
+
+.amber {
+  --main-color: #ffc107;
+}
+
+.black {
+  --main-color: #222;
+}
+/* Background farger */
+.bg {
+  background-color: var(--main-color, var(--default-color, --white));
+}
+
+/* Color farger */
+.text-color {
+  color: var(--main-color, var(--default-color, --black));
+}
+
+.white-text {
+  color: var(--white);
+}
+
+.black-text {
+  color: var(--black);
+}
+
+/* mellomrom */
+.space {
+  display: block;
+  margin: 2em;
+}
+
+/* Container */
+.container {
+  background-color: var(--main-color, --white);
+  position: relative;
+  display: block;
+  margin: 2em auto;
+  padding: 4vh;
+  max-width: 1000px;
+}
+
+/* display */
+.no-padding {
+  padding: 0;
+  margin: 0;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.center-block {
+  display: block;
+  margin: auto;
+}
+
+/* Tekst */
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--main-color, --black);
+  padding: 1em;
+}
+
+/* Komponenter kommer under */
+
+/* Knapper */
+
+.btn {
+  text-decoration: none;
+  border: none;
+  background: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  box-sizing: border-box;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.btn:hover {
+  /* background-color: var(--main-color, var(--default-color, --white)); */
+  filter: brightness(120%);
+}
+
+.btn:active {
+  filter: brightness(80%);
+}
+
+.small {
+  padding: 10px 14px;
+  --border-width: 3px;
+}
+
+.large {
+  padding: 25px 35px;
+  --border-width: 7px;
+}
+
+.filled {
+  background-color: var(--main-color, var(--default-color, --white));
+}
+
+.outline {
+  border-color: var(--main-color, var(--default-color, --white));
+  border-style: solid;
+  border-width: var(--border-width, 5px);
+  border-radius: 12px;
+}
+
+.flat {
+  box-shadow: none;
+}
+
+.flat:active {
+  background-color: var(--main-color, var(--default-color, --white));
+}
+
+/* Navbar */
+
+.nav-space {
+  margin: 20px;
+  padding: 5px;
+}
+
+.nav {
+  box-sizing: border-box;
+  display: block;
+  background-color: var(--main-color, var(--default-color, --white));
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 0 30px;
+  margin-bottom: 15px;
+}
+
+.fixed-nav {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+/* Input */
+.input,
+.select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Radio button */
+
+.check-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.check-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.check-label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.check-label input:checked ~ .checkmark {
+  background-color: var(--main-color, var(--default-color, --white));
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check-label .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checkbox:hover input ~ .mark {
+  background-color: #ccc;
+}
+
+.checkbox input:checked ~ .mark {
+  background-color: var(--main-color, var(--default-color, --white));
+}
+
+.mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox input:checked ~ .mark:after {
+  display: block;
+}
+
+.checkbox .mark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Grafer */
+.graf {
+  margin: 10px;
+  background-color: var(--main-color, var(--default-color, --white));
+  flex-grow: 1;
+  transition: width 1s;
+}
+
+.graf-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.standing {
+  flex-direction: row;
+  align-items: flex-end;
+}
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 70%;
+  width: 55%;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  transition: 1s;
+}
+
+.open {
+  z-index: 103;
+  display: block;
+  opacity: 1;
+  top: 50%;
+  transform: scaleX(1) scaleY(1) translateY(-50%);
+}
+
+.modal-content {
+  padding: 24px;
+}
+
+.modal-footer {
+  border-radius: 0 0 2px 2px;
+  background-color: #fafafa;
+  padding: 4px 6px;
+  height: 56px;
+  text-align: right;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 102;
+  top: -25%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background: #000;
+}
+
+.modal-overlay-open {
+  display: block;
+  opacity: 0.5;
+}
