@@ -1,6 +1,15 @@
 * {
+  font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
+}
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(180deg, rgb(255, 123, 0) 0%, orange 50%, rgb(255, 205, 113) 100%);
 }
 
 *:focus {
@@ -131,15 +140,22 @@ h6 {
 /* Knapper */
 
 .btn {
+  width: 100%;
   text-decoration: none;
   border: none;
   background: none;
   padding: 15px 25px;
   cursor: pointer;
   box-sizing: border-box;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.0);
+  border-radius: 4px;
   transition: 0.5s;
+
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+  background-color: #fafafa;
 }
 
 .btn:hover {
@@ -187,13 +203,17 @@ h6 {
   padding: 5px;
 }
 
+#navn {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
 .nav {
   box-sizing: border-box;
   display: block;
-  background-color: var(--main-color, var(--default-color, --white));
+  background-color: rgb(255, 123, 0);
   width: 100%;
   padding: 10px;
-  box-shadow: 0 0 30px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
   margin-bottom: 15px;
 }
 
